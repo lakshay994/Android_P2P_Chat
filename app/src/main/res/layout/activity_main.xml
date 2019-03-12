@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:paddingHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/reLayout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <Button
+            android:text="Turn Off"
+            android:id="@+id/onOff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:onClick="discoverPeers"
+            android:id="@+id/discover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="discover" />
+
+        <TextView
+            android:id="@+id/connectionStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Connection Status"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/peerListView"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/reLayout"
+        android:layout_marginTop="25dp"
+        android:layout_alignParentLeft="true" />
+
+    <ListView
+        android:id="@+id/readMsg"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_below="@+id/peerListView"
+        android:layout_marginTop="30dp"/>
+
+    <EditText
+        android:id="@+id/writeMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_toStartOf="@+id/sendButton"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/sendButton" />
+
+    <Button
+        android:onClick="sendMessage"
+        android:id="@+id/sendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:text="Send"
+        android:layout_alignParentRight="true" />
+
+</RelativeLayout>

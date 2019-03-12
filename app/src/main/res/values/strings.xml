@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">WiFi-Direct</string>
+    <string name="wifiOn">Turn Off</string>
+    <string name="wifiOff">Turn On</string>
+    <string name="title_activity_bt_chat">BtChat</string>
+    <string name="wireless_networks">Wireless Networks G14</string>
+</resources>
